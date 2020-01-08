@@ -5,18 +5,17 @@ package com.javarush.task.task04.task0414;
 */
 
 import java.io.*;
+import java.util.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String i = reader.readLine();
-        int year = Integer.parseInt(i);
-        int days = 365;
-        if (year % 400 == 0) {
-            System.out.println();
-            System.out.println("количество дней в году: " + (days + 1));
-        } else if (year % 4 == 0 && year % 100 != 0) System.out.println("количество дней в году: " + (days + 1));
-        else System.out.println("количество дней в году: " + days);
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+        int year = Integer.parseInt(buffer.readLine());
+        System.out.print("количество дней в году: ");
+        int daysInYear = 365;
+        if (year % 4 == 0 && year % 100 != 0) daysInYear = 366;
+        else if(year % 400 == 0) daysInYear = 366;
+        System.out.println(daysInYear);
+
     }
 }
