@@ -5,17 +5,15 @@ package com.javarush.task.task04.task0412;
 */
 
 import java.io.*;
+import java.util.*;
 
 public class Solution {
     public static void main(String[] args) throws Exception {
-        //напишите тут ваш код
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String symbol = reader.readLine();
-        int n = Integer.parseInt(symbol);
-        if (n < 0) n ++;
-        else if (n > 0) n *= 2;
-        System.out.println(n);
-
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+        int number = Integer.parseInt(buffer.readLine());
+        if(number > 0) number *= 2;
+        else if(number < 0) number ++;
+        System.out.println(number);
     }
 
 }
