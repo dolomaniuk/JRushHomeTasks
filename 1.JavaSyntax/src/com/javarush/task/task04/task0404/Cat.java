@@ -1,7 +1,7 @@
 package com.javarush.task.task04.task0404;
 
 /* 
-Реализовать метод addNewCat
+Учет котов
 */
 
 public class Cat {
@@ -13,6 +13,9 @@ public class Cat {
     }
 
     public static void main(String[] args) {
-addNewCat();
+        addNewCat();
+        System.out.println(catsCount);
+        addNewCat();
+        System.out.println(catsCount);
     }
 }
