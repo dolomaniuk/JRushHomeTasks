@@ -6,16 +6,15 @@ package com.javarush.task.task04.task0409;
 
 public class Solution {
     public static void main(String[] args) {
-        closeToTen(8, 11);
-        closeToTen(14, 7);
+        displayClosestToTen(8, 11);
+        displayClosestToTen(7, 14);
+        displayClosestToTen(-14, 24);
     }
 
-    public static void closeToTen(int a, int b) {
-        //::CODE:
-        if (abs((10 - a)) < abs((10 - b))) System.out.println(a);
-        else if (abs((10 - a)) > abs((10 - b))) System.out.println(b);
-        else System.out.println(a);
-
+    public static void displayClosestToTen(int a, int b) {
+        int min = a;
+        if (abs(10 - a) > abs(10 - b)) min = b;
+        System.out.println(min);
     }
 
     public static int abs(int a) {
