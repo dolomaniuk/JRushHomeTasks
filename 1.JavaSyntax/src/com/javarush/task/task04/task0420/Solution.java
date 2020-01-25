@@ -19,11 +19,12 @@ public class Solution {
 
         int first_number = max(max(a, b), max(b, c));
         int third_number = min(min(a, b), min(b, c));
-        int second_number = 0;
+        int second_number = (a + b + c - (first_number + third_number));
+//        int second_number = 0;
 
-        if (a == first_number) second_number = max(b, c);
-        else if (b == first_number) second_number = max(a,c);
-        else second_number = max(a, b);
+//        if (a == first_number) second_number = max(b, c);
+//        else if (b == first_number) second_number = max(a,c);
+//        else second_number = max(a, b);
         System.out.printf("%d %d %d", first_number, second_number, third_number);
     }
 }
