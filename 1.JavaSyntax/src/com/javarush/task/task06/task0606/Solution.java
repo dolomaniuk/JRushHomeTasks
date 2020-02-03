@@ -14,13 +14,19 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String str = reader.readLine();
-        int number = Integer.parseInt(str);
-        int razradnost = (number >= 0) ? (razradnost = str.length() - 1) : (razradnost = str.length() - 2);
+        int strLength = str.length();
+        int count;
+        if (Character.isDigit(str.charAt(0))) count = 0;
+        else count = 1;
 
-        for (int i = razradnost; i >= 0; i--) {
-            int chislo = (int) (number / Math.pow(10, i));
-            int res = (chislo % 2 == 0) ? even++ : odd++;
-            number -= chislo * (Math.pow(10, i));
+        System.out.println(count);
+
+        for (int i = count; i < strLength; i++) {
+            if (str.charAt(i) % 2 == 0) {
+                even++;
+            } else {
+                odd++;
+            }
         }
         System.out.printf("Even: %d Odd: %d", even, odd);
     }
