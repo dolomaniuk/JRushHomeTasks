@@ -18,16 +18,11 @@ public class Calculator {
     }
 
     public static double division(int a, int b) {
-        double newA = a;
-        double newB = b;
-        return newA / newB;
+        return (double)a/b;
     }
 
     public static double percent(int a, int b) {
-        double newA = a;
-        double newB = b;
-        double x = newA * newB / 100;
-        return x;
+        return (double)a*b / 100;
     }
 
     public static void main(String[] args) {
