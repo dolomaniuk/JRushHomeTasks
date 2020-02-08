@@ -19,7 +19,7 @@ public class Solution {
 
     public static int[] initializeArray(int[] array) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(reader.readLine());
         }
         return array;
